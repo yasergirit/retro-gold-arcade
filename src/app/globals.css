@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-white;
+    background-image: 
+      linear-gradient(rgba(0, 255, 247, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 247, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+@layer utilities {
+  .text-neon-cyan {
+    color: #00fff7;
+    text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff766;
+  }
+  .text-neon-magenta {
+    color: #ff00e6;
+    text-shadow: 0 0 10px #ff00e6, 0 0 20px #ff00e666;
+  }
+  .text-neon-gold {
+    color: #ffd700;
+    text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd70066;
+  }
+  .glow-border-cyan {
+    border-color: #00fff7;
+    box-shadow: 0 0 10px #00fff7, 0 0 20px #00fff766, inset 0 0 10px #00fff711;
+  }
+  .glow-border-magenta {
+    border-color: #ff00e6;
+    box-shadow: 0 0 10px #ff00e6, 0 0 20px #ff00e666, inset 0 0 10px #ff00e611;
+  }
+  .glow-border-gold {
+    border-color: #ffd700;
+    box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd70066, inset 0 0 10px #ffd70011;
+  }
+  .btn-retro {
+    @apply px-6 py-3 font-pixel text-xs border-2 transition-all duration-200 cursor-pointer;
+    @apply active:scale-95 active:brightness-90;
+  }
+  .btn-cyan {
+    @apply btn-retro text-neon-cyan glow-border-cyan bg-dark-card;
+    @apply hover:bg-cyan-950/30;
+  }
+  .btn-magenta {
+    @apply btn-retro text-neon-magenta glow-border-magenta bg-dark-card;
+    @apply hover:bg-pink-950/30;
+  }
+  .btn-gold {
+    @apply btn-retro text-neon-gold glow-border-gold bg-dark-card;
+    @apply hover:bg-yellow-950/30;
+  }
+  .card-retro {
+    @apply bg-dark-card border border-dark-border rounded-lg p-6;
+    @apply shadow-lg;
+  }
+}
